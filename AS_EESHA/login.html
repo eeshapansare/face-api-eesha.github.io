@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishwakarma University - Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('eesha1.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    .login-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .login-container h2 {
+      margin-bottom: 30px;
+    }
+
+    .login-form input {
+      width: calc(100% - 20px);
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    .login-form button {
+      width: calc(100% - 20px);
+      padding: 15px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      outline: none;
+    }
+
+    .login-form button:hover {
+      background-color: #0056b3;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    .login-container img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="https://yt3.ggpht.com/a/AGF-l7_KRFm7AGetACD_Rh3f9AmTbYAFPj4dWuKXYw=s900-c-k-c0xffffffff-no-rj-mo" alt="Logo">
+    <h2>Login</h2>
+    <form class="login-form" id="loginForm" onsubmit="return validateForm()">
+      <input type="text" name="username" placeholder="Username">
+      <div id="usernameError" class="error"></div>
+      <input type="password" name="password" placeholder="Password">
+      <div id="passwordError" class="error"></div>
+      <button type="submit"><i class="icon fas fa-sign-in-alt"></i>Login</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      var username = document.forms["loginForm"]["username"].value;
+      var password = document.forms["loginForm"]["password"].value;
+      var usernameError = document.getElementById("usernameError");
+      var passwordError = document.getElementById("passwordError");
+      var isValid = true;
+
+      usernameError.innerHTML = "";
+      passwordError.innerHTML = "";
+
+      if (username !== "eesha") {
+        usernameError.innerHTML = "Incorrect username";
+        isValid = false;
+      }
+
+      if (password !== "eesha12345") {
+        passwordError.innerHTML = "Incorrect password";
+        isValid = false;
+      }
+
+      if (isValid) {
+        window.location.href = "welcome.html"; // Redirect to welcome.html
+      }
+
+      return false; // Prevent default form submission
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     background-color: #ffb6c1; /* Baby pink background */
+    overflow: hidden; /* Prevent scroll bars */
+} 
+   
+h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* White text shadow for readability */
+} 
+   
+canvas {
+    position: absolute;
+    border: 2px solid white; /* White border for the canvas */
+} 
+  
+  
